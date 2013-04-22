@@ -25,6 +25,8 @@ if (is_single()) {
   render_view("posts/single");
 } else if (is_archive()) {
   render_view("posts/archive");
+} else if (is_front_page()) {
+  render_view("static/homepage");
 } else {
   render_view("posts/404");
 }
