@@ -1,2 +1,10 @@
-%h1= link_to(get_bloginfo('name'), get_bloginfo('url'))
-%h2= get_bloginfo('description')
+.navbar-wrapper
+  .container
+    .navbar.navbar-inverse
+      .navbar-inner
+        =link_to('BRAND', get_bloginfo('url'), ['class'=>'brand'])
+        .nav
+          %li.active
+            =link_to('HOME', '#')
+          %li
+            =link_to('ABOUT', '#')
