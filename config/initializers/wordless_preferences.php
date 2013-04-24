@@ -15,6 +15,6 @@ Wordless::set_preference("css.compass_path",     "/usr/local/rvm/gems/ruby-2.0.0
 // Wordless::set_preference("css.lessc_path",       "/usr/bin/lessc");
 // Wordless::set_preference("css.compress",         false);
 
-Wordless::set_preference("js.ruby_path",         "ruby");
+Wordless::set_preference("js.ruby_path",         "/usr/local/rvm/wrappers/ruby-2.0.0-p0/ruby");
 // Wordless::set_preference("js.yui_compress",      false);
 // Wordless::set_preference("js.yui_munge",         false);
