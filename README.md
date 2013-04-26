@@ -1,3 +1,5 @@
 # A wordpress template with Wordless
 
-Wordpress template from haml, sass, coffeescript, just like in Rails. :)
+Wordpress template from haml, sass, coffeescript...
+
+Unfortunately, it is not so usefull solution...
