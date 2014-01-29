@@ -1,9 +1,1 @@
-# A wordpress template with Wordless
-
-Wordpress template from haml, sass, coffeescript...
-
-Unfortunately, it is not so usefull solution...
-
-## Update
-
-I give it a try again... hope this time, I will like it and boost my performance in wordpress building...
+# Project 789

@@ -1,4 +1,6 @@
 .idea
-tmp
-.sass-cache
-wp-config.php
+.bundle
+template/build
+template/.sass-cache
+.DS_Store
+
