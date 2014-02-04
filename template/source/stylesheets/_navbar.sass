@@ -1,3 +1,6 @@
+=menu-link-hover
+  border-bottom: 7px $brand-danger solid
+
 .navbar-default
   .navbar-nav
     > li
@@ -13,9 +16,20 @@
       &,
       &:hover,
       &:focus
-
         background-color: white
-        border-bottom: 7px $brand-danger solid
-
+        +menu-link-hover
+  .menu-link
+    > li > a
+      &:hover,
+      &:focus
+        +menu-link-hover
+  .social-icons
+    > li
+      padding-right: 0px
+    > li > a
+      font-size: $font-size-base
+      padding-top: $font-size-base
+      padding-bottom: 0
+      padding-right: 0
 .navbar
   +box-shadow(0px 5px 7px #c6c6c6)
