@@ -27,7 +27,7 @@
 
 
         .collapse.navbar-collapse#main-menu
-          %ul.nav.navbar-nav.menu-link
+          %ul.menu-link.nav.navbar-nav
             %li.active=link_to 'Home', '#'
             %li=link_to 'About', '#'
             %li=link_to 'Blog', '#'
@@ -64,5 +64,4 @@
     .container
       = yield
 
-    / Placed at the end of the document so the pages load faster
-    %script{type: 'text/javascript', src: 'javascripts/all.js'}
+      = partial 'layouts/footer'
