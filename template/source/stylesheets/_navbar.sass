@@ -1,5 +1,7 @@
-=menu-link-hover
-  border-bottom: 7px $brand-danger solid
+=menu-link-hover($color, $height)
+  border-bottom: 7px $color solid
+  +transition(all .15s ease-in-out)
+  height: $height
 
 .navbar-default
   .navbar-nav
@@ -17,12 +19,12 @@
       &:hover,
       &:focus
         background-color: white
-        +menu-link-hover
+        +menu-link-hover($brand-danger, 63px)
   .menu-link
     > li > a
       &:hover,
       &:focus
-        +menu-link-hover
+        +menu-link-hover($brand-danger, 63px)
   .social-icons
     > li
       padding-right: 0px
