@@ -1,0 +1,14 @@
+.entry.row
+  %article#post-id
+    %header
+      .entry-date
+        %time.entry-date{datetime:'2014-02-02'} February 2, 2014
+      %a{href: '#'}
+        %h3 Article title
+    =image_tag 'content_image.jpg', class: 'img-responsive'
+    .entry-summary
+      %p Lorem ipsum
+      .meta-nav
+    %footer
+      .more-link.pull-right
+        =link_to 'Read Full Article'
