@@ -1,12 +1,12 @@
 .sidebar
-  #logo-widget
+  #logo-widget.hidden-xs.hidden-sm
     .logo
       =image_tag 'logo.png'
     .brand
       =image_tag 'brand.png'
     .tagline.text-center
       %em This is the tagline
-  .divider
+    .divider
   #banner-widget
     .banner
       %h3.strong.text-center Banner title
@@ -16,12 +16,26 @@
         %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque mauris quis orci blandit vestibulum. Nam aliquam cursus sem pretium ornare. Nunc eleifend vulputate felis id facilisis. Pellentesque rutrum vestibulum tortor vel adipiscing. Phasellus adipiscing euismod nisl a placerat. Donec sed eleifend justo. Maecenas cursus imperdiet elit, ac tempor est tempus sollicitudin. Proin facilisis est
       %form.email-form
         .row.nopadding
-          .col-sm-10.nopadding
+          .col-xs-10.nopadding
             %input{type: 'email', placeholder: 'Enter your email...'}
-          .col-sm-2.nopadding
+          .col-xs-2.nopadding
             %button
               %i.fa.fa-angle-right.fa-2x
 
-
   .divider
   #tweets-widget
+    %h3.strong Tweets
+    %p
+      %strong@someone
+      Tweet 1
+      =link_to 'something', '#'
+    %p
+      @someone Tweet 1
+      =link_to 'something', '#'
+    %p
+      @someone Tweet 1
+      =link_to 'something', '#'
+    %p
+      @someone Tweet 1
+      =link_to 'something', '#'
+

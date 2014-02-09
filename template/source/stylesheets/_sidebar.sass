@@ -1,19 +1,13 @@
+=divider
+  background-color: $divider-color
+  height: 1px
+  margin: 50px auto
+  position: relative
+  width: 100%
+
 .sidebar
   .divider
-    background-color: $divider-color
-    height: 1px
-    margin: 50px auto
-    position: relative
-    width: 100%
-    &:before
-      background: $body-bg no-repeat 20px 0px image_url('chili.png')
-      width: 100px
-      height: 40px
-      content: ""
-      z-index: 1
-      top: -20px
-      position: absolute
-      left: 85px
+    +divider
 
   .banner
     background-color: $brand-danger
@@ -21,28 +15,32 @@
     padding-top: 10px 0px
     h3
       padding-top: 10px
+      margin: 0
+      color: white
     img
       padding: 5px
     p
       padding: 0px 15px
       margin-top: 5px
-    .email-form
-      padding-bottom: 20px
-      input,
-      button
-        width: 100%
+
+//  Email input form in _forms.sass
+
+@media (min-width: $screen-md-min)
+  .sidebar
+    .divider
+      &:before
+        background: $body-bg no-repeat 20px 0px image_url('chili.png')
+        width: 100px
         height: 40px
-        border: none
-        &:active,
-        &:focus
-          border: none
-          outline: none
-        background-color: white
-      input
-        padding: 14px
-      button
-        border-left: 2px solid $body-bg
-        color: $brand-danger
-        &:hover
-          background-color: $gray-lighter
+        content: ""
+        z-index: 1
+        top: -20px
+        position: absolute
+        left: 30%
+
+
+
+@media (min-width: $screen-sm-min)
+
+
 
