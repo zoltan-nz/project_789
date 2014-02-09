@@ -13,7 +13,7 @@
       .text-center
         =image_tag 'fork_knife.png'
       .text-justify
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque mauris quis orci blandit vestibulum. Nam aliquam cursus sem pretium ornare. Nunc eleifend vulputate felis id facilisis. Pellentesque rutrum vestibulum tortor vel adipiscing. Phasellus adipiscing euismod nisl a placerat. Donec sed eleifend justo. Maecenas cursus imperdiet elit, ac tempor est tempus sollicitudin. Proin facilisis est
+        %p=lorem.paragraph
       %form.email-form
         .row.nopadding
           .col-xs-10.nopadding
@@ -21,21 +21,12 @@
           .col-xs-2.nopadding
             %button
               %i.fa.fa-angle-right.fa-2x
-
-  .divider
+    .divider
   #tweets-widget
     %h3.strong Tweets
-    %p
-      %strong@someone
-      Tweet 1
-      =link_to 'something', '#'
-    %p
-      @someone Tweet 1
-      =link_to 'something', '#'
-    %p
-      @someone Tweet 1
-      =link_to 'something', '#'
-    %p
-      @someone Tweet 1
-      =link_to 'something', '#'
-
+    - 5.times do
+      %p
+        @
+        %strong=lorem.word
+        =lorem.sentence
+        =link_to 'something', '#'
