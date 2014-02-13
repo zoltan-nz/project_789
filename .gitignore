@@ -1,6 +1,5 @@
 .idea
 .bundle
-template/build
 template/.sass-cache
 .DS_Store
 
