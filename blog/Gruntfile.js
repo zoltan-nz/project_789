@@ -31,21 +31,12 @@ module.exports = function (grunt) {
                 files: '<%= yeoman.app %>/templates/**/*.hbs',
                 tasks: ['emberTemplates']
             },
-            coffee: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-                tasks: ['coffee:dist']
-            },
-            coffeeTest: {
-                files: ['test/spec/{,*/}*.coffee'],
-                tasks: ['coffee:test']
-            },
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server']
             },
             neuter: {
-                files: ['.tmp/scripts/{,*/}*.js',
-                        '!.tmp/scripts/combined-scripts.js'],
+                files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
                 tasks: ['neuter']
             },
             livereload: {
@@ -127,32 +118,12 @@ module.exports = function (grunt) {
                 'test/spec/{,*/}*.js'
             ]
         },
-        jasmine: {
+        mocha: {
             all: {
-                /*src: '',*/
                 options: {
-                    specs: 'test/spec/{,*/}*.js'
+                    run: true,
+                    urls: ['http://localhost:<%= connect.options.port %>/index.html']
                 }
-            }
-        },
-        coffee: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/scripts',
-                    src: '{,*/}*.coffee',
-                    dest: '.tmp/scripts',
-                    ext: '.js'
-                }]
-            },
-            test: {
-                files: [{
-                    expand: true,
-                    cwd: 'test/spec',
-                    src: '{,*/}*.coffee',
-                    dest: '.tmp/spec',
-                    ext: '.js'
-                }]
             }
         },
         compass: {
@@ -324,17 +295,14 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'emberTemplates',
-                'coffee:dist',
                 'compass:server'
             ],
             test: [
                 'emberTemplates',
-                'coffee',
                 'compass'
             ],
             dist: [
                 'emberTemplates',
-                'coffee',
                 'compass:dist',
                 'imagemin',
                 'svgmin',
@@ -362,12 +330,11 @@ module.exports = function (grunt) {
         neuter: {
             app: {
                 options: {
-                    template: "{%= src %}",
                     filepathTransform: function (filepath) {
-                        return '.tmp/' + filepath;
+                        return yeomanConfig.app + '/' + filepath;
                     }
                 },
-                src: ['.tmp/scripts/app.js'],
+                src: '<%= yeoman.app %>/scripts/app.js',
                 dest: '.tmp/scripts/combined-scripts.js'
             }
         }
