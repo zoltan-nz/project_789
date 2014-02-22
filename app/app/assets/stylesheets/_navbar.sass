@@ -1,0 +1,43 @@
+=menu-link-hover($color, $height)
+  border-bottom: 7px $color solid
+  +transition(all .15s ease-in-out)
+  height: $height
+
+.navbar-default
+  .navbar-nav
+    > li
+      padding-right: 20px
+    > li > a
+      font-size: $font-size-large
+      color: $navbar-default-link-color
+      &:hover,
+      &:focus
+        color: $navbar-default-link-hover-color
+        background-color: $navbar-default-link-hover-bg
+    > .active > a
+      &,
+      &:hover,
+      &:focus
+        background-color: white
+        +menu-link-hover($brand-danger, 63px)
+  .menu-link
+    > li > a
+      &:hover,
+      &:focus
+        +menu-link-hover($brand-danger, 63px)
+  .social-icons
+    > li
+      padding-left: 0px
+      padding-right: 15px
+    > li > a
+      font-size: $font-size-base
+      padding-top: 11px
+      padding-bottom: 0
+      padding-right: 0
+      padding-left: 0
+.navbar
+  +box-shadow(0px 5px 7px #c6c6c6)
+
+@media (min-width: 0px) and (max-width: 991px)
+  .social-icons
+    display: none
