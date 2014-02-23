@@ -1,0 +1,28 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/szines/projects/project_789/app/app/controllers/application_controller.rb": [
+        null,
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/szines/projects/project_789/app/app/controllers/home_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/szines/projects/project_789/app/app/helpers/application_helper.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1393178552
+  }
+}
