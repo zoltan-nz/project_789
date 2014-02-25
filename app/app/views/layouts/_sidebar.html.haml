@@ -1,0 +1,32 @@
+.sidebar
+  #logo-widget.hidden-xs.hidden-sm
+    .logo
+      =image_tag 'logo.png'
+    .brand
+      =image_tag 'brand.png'
+    .tagline.text-center
+      %em This is the tagline
+    .divider
+  #banner-widget
+    .banner
+      %h3.strong.text-center Banner title
+      .text-center
+        =image_tag 'fork_knife.png'
+      .text-justify
+        %p
+      %form.email-form
+        .row.nopadding
+          .col-xs-10.nopadding
+            %input{type: 'email', placeholder: 'Enter your email...'}
+          .col-xs-2.nopadding
+            %button
+              %i.fa.fa-angle-right.fa-2x
+    .divider
+  #tweets-widget
+    %h3.strong Tweets
+    - 5.times do
+      %p
+        @
+        %strong 'username'
+        Content...
+        =link_to 'something', '#'

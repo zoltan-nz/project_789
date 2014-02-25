@@ -11,3 +11,5 @@
  * file per style scope.
  *
  *= require all
+ *= require_self
+ */

@@ -1,0 +1,13 @@
+.entry
+  %article#post-id
+    %header
+      .entry-date
+        %time.entry-date{datetime:'2014-02-02'}=@post.updated_at
+      =link_to @post do
+        %h3=@post.title
+    =image_tag 'content_image.jpg', class: 'img-responsive'
+    .entry-summary
+      %p=@post.lead
+      .meta-nav
+    %section
+      %p=@post.body

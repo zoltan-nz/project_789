@@ -1,0 +1,42 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle{type: 'button', data: {toggle: 'collapse', target: '#main-menu'}}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+
+
+    .collapse.navbar-collapse#main-menu
+      %ul.menu-link.nav.navbar-nav
+        %li.active=link_to 'Home', root_path
+        %li=link_to 'About', '#'
+        %li=link_to 'Blog', '#'
+        %li=link_to 'Competition', '#'
+        %li=link_to 'Login', '#'
+      %ul.nav.navbar-nav.navbar-right.social-icons
+        %li
+          %a{href: "#"}
+            %span.fa-stack.fa-lg
+              %i.fa.fa-circle.fa-stack-2x
+              %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+        %li
+          %a{href: "#"}
+            %span.fa-stack.fa-lg
+              %i.fa.fa-circle.fa-stack-2x
+              %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+        %li
+          %a{href: "#"}
+            %span.fa-stack.fa-lg
+              %i.fa.fa-circle.fa-stack-2x
+              %i.fa.fa-google-plus.fa-stack-1x.fa-inverse
+        %li
+          %a{href: "#"}
+            %span.fa-stack.fa-lg
+              %i.fa.fa-circle.fa-stack-2x
+              %i.fa.fa-pinterest.fa-stack-1x.fa-inverse
+        %li
+          %a{href: "#"}
+            %span.fa-stack.fa-lg
+              %i.fa.fa-circle.fa-stack-2x
+              %i.fa.fa-instagram.fa-stack-1x.fa-inverse

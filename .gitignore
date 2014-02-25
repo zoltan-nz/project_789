@@ -5,3 +5,5 @@ template/.sass-cache
 node_modules
 .tmp
 .sass-cache
+coverage
+tmp
